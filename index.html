@@ -8,6 +8,11 @@
     <title>Your Favourite Players</title>
     <!-- Link Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+
     <!-- Tailwind custom code -->
     <script>
         tailwind.config = {
@@ -17,6 +22,9 @@
                         common: '#0A0826',
                         heading: '#FF5E19',
                         bodyBg: '#1a173e',
+                    },
+                    font: {
+                        'sss': ['Berkshire Swash', 'cursive'],
                     }
                 }
             }
@@ -31,10 +39,10 @@
             <img class="absolute bottom-0 left-0" src="/images/banner-ronaldo.png" alt="">
             <div class="text-center">
                 <div class="w-3/5 mx-auto pt-20 px-10">
-                    <h1 class="text-6xl text-heading mb-5">Your Favourite Players</h1>
-                    <p class="text-gray-400">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                        Velit officia consequat
-                        duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                    <h1 class="text-6xl text-heading mb-5 font-['Open_sss']">Your Favourite Players</h1>
+                    <p class="text-gray-400">Football is like life. It requires perseverance, self-denial, hard work,
+                        sacrifice, dedication, and respect for authority. The only place success comes before work is in
+                        the dictionary.</p>
                 </div>
             </div>
             <img class="absolute bottom-0 right-0" src="/images/rectangle.png" alt="">
@@ -46,7 +54,7 @@
             <!-- Players -->
             <div class="w-3/4 grid grid-cols-3 gap-4">
                 <!-- 1st player -->
-                <div class="text-center bg-common text-white rounded-sm pb-5">
+                <div class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
                     <img src="/images/ronaldo.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Cristiano Ronaldo</h4>
                     <p class="mt-2"><span>96 Goals . 120 assist</span></p>
@@ -54,7 +62,7 @@
                         class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
                 </div>
                 <!-- 2nd player -->
-                <div class="text-center bg-common text-white rounded-sm pb-5">
+                <div class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
                     <img src="/images/messi.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Lionel Messi</h4>
                     <p class="mt-2"><span>96 Goals . 120 assist</span></p>
@@ -62,7 +70,7 @@
                         class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
                 </div>
                 <!-- 3rd player -->
-                <div class="text-center bg-common text-white rounded-sm pb-5">
+                <div class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
                     <img src="/images/neymar.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Neymar</h4>
                     <p class="mt-2"><span>96 Goals . 120 assist</span></p>
@@ -70,7 +78,7 @@
                         class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
                 </div>
                 <!-- 4th player -->
-                <div class="text-center bg-common text-white rounded-sm pb-5">
+                <div class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
                     <img src="/images/ramos.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Sergio Ramos</h4>
                     <p class="mt-2"><span>96 Goals . 120 assist</span></p>
@@ -78,7 +86,7 @@
                         class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
                 </div>
                 <!-- 5th player -->
-                <div class="text-center bg-common text-white rounded-sm pb-5">
+                <div class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
                     <img src="/images/mbappe.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Kylian Mbappé</h4>
                     <p class="mt-2"><span>96 Goals . 120 assist</span></p>
@@ -86,7 +94,7 @@
                         class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
                 </div>
                 <!-- 6th player -->
-                <div class="text-center bg-common text-white rounded-sm pb-5">
+                <div class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
                     <img src="/images/ibrahimovic.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Zlatan Ibrahimovic</h4>
                     <p class="mt-2"><span>96 Goals . 120 assist</span></p>
@@ -94,7 +102,7 @@
                         class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
                 </div>
                 <!-- 7th player -->
-                <div class="text-center bg-common text-white rounded-sm pb-5">
+                <div class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
                     <img src="/images/renato-sanches.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Renato Sanches</h4>
                     <p class="mt-2"><span>96 Goals . 120 assist</span></p>
@@ -102,7 +110,7 @@
                         class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
                 </div>
                 <!-- 8th player -->
-                <div class="text-center bg-common text-white rounded-sm pb-5">
+                <div class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
                     <img src="/images/machado.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Vítor Machado</h4>
                     <p class="mt-2"><span>96 Goals . 120 assist</span></p>
@@ -110,7 +118,7 @@
                         class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
                 </div>
                 <!-- 9th player -->
-                <div class="text-center bg-common text-white rounded-sm pb-5">
+                <div class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
                     <img src="/images/salah.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Mohamed Salah</h4>
                     <p class="mt-2"><span>96 Goals . 120 assist</span></p>
@@ -120,10 +128,10 @@
             </div>
             <!-- Aside Widget -->
             <aside class="w-1/4 grid gap-4">
-                <div id="selected" class="text-center bg-common border border-black rounded-sm">
+                <div id="selected" class="text-center bg-common border border-gray-500 rounded-sm">
                     <h4 class="text-2xl font-semibold text-white pt-5">Selected - V</h4>
                 </div>
-                <div class="text-center p-5 text-gray-400 bg-common border border-black rounded-sm">
+                <div class="text-center p-5 text-gray-400 bg-common border border border-gray-500 rounded-sm">
                     <h4 class="text-2xl font-semibold text-white pt-5">Budget</h4>
                     <div class="flex justify-between mt-7">
                         <span>Per Player</span>

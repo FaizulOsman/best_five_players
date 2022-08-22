@@ -12,9 +12,11 @@ function selectButton(element) {
 
     // After click select Button it will be desable 
     element.setAttribute('disabled', true)
+    element.style.backgroundColor = 'tomato'
 
     // Get player name By using parentNode
     const playerName = element.parentNode.children[1].innerText
+
 
     // Get Selected area
     const selected = document.getElementById('selected')
@@ -42,6 +44,8 @@ document.getElementById('calculate').addEventListener('click', function () {
     // count value cannot be more then five
     if (count > 5) {
         count = 5
+    } else if (count == 0) {
+        alert('Please select at least one player')
     }
 
     // Get per-player and player-expenses id
@@ -51,16 +55,17 @@ document.getElementById('calculate').addEventListener('click', function () {
 
     const countPlayerExpenses = Number(perPlayer) * count
 
-
+    // Alert for invalid value
     if (perPlayer == '') {
-        alert('Please type a number')
+        alert('Please provide a number')
         return
+    } else if (Number(perPlayer) < 0) {
+        alert('Please provide a positive number')
     } else if (isNaN(countPlayerExpenses)) {
         alert('Please make sure that your input is a number')
         return
     }
 
-    console.log(countPlayerExpenses)
 
     // Calculate Player Expenses
     playerExpenses.innerText = countPlayerExpenses
@@ -69,14 +74,20 @@ document.getElementById('calculate').addEventListener('click', function () {
 
 
 
-
+// Calculate button click
 document.getElementById('calculate-total').addEventListener('click', function () {
     const playerExpenses = document.getElementById('player-expenses').innerText
     const managerCost = document.getElementById('manager-cost').value
     const coachCost = document.getElementById('coach-cost').value
     const total = document.getElementById('total')
 
-
+    if (managerCost == '' || coachCost == '') {
+        alert('Please type a number')
+        return
+    } else if (Number(managerCost) < 0 || Number(coachCost < 0)) {
+        alert("Please provide a positive number")
+        return
+    }
 
     total.innerText = Number(playerExpenses) + Number(managerCost) + Number(coachCost)
 })
