@@ -24,7 +24,7 @@
                         bodyBg: '#1a173e',
                     },
                     font: {
-                        'sss': ['Berkshire Swash', 'cursive'],
+                        'swash': ['Berkshire Swash', 'cursive'],
                     }
                 }
             }
@@ -35,17 +35,20 @@
 <body class="bg-bodyBg">
     <!-- Header Section -->
     <header class="bg-common pt-20">
-        <div class="relative h-96">
+        <div onmouseenter="bannerImgMouseEnter(this)" onmouseleave="bannerImgMouseLeave(this)" class="relative h-96">
             <img class="absolute bottom-0 left-0" src="/images/banner-ronaldo.png" alt="">
             <div class="text-center">
-                <div class="w-3/5 mx-auto pt-20 px-10">
-                    <h1 class="text-6xl text-heading mb-5 font-['Open_sss']">Your Favourite Players</h1>
-                    <p class="text-gray-400">Football is like life. It requires perseverance, self-denial, hard work,
-                        sacrifice, dedication, and respect for authority. The only place success comes before work is in
+                <div class="w-3/5 mx-auto pt-20 px-10" onmouseover="bannerHover()">
+                    <h1 id="banner-heading" class="hover:tracking-wider text-6xl text-heading mb-5"
+                        style="font-family: 'Berkshire Swash', cursive;">Your
+                        Favourite Players</h1>
+                    <p id="banner-paragraph" class="text-gray-400">Football is like life. It requires perseverance,
+                        self-denial, hard work, sacrifice, dedication, and respect for authority. The only place success
+                        comes before work is in
                         the dictionary.</p>
                 </div>
             </div>
-            <img class="absolute bottom-0 right-0" src="/images/rectangle.png" alt="">
+            <img class="absolute bottom-0 right-0" src="/images/goal.png" alt="">
         </div>
     </header>
     <!-- Main Section -->
@@ -54,76 +57,85 @@
             <!-- Players -->
             <div class="w-3/4 grid grid-cols-3 gap-4">
                 <!-- 1st player -->
-                <div class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
-                    <img src="/images/ronaldo.png" alt="">
+                <div onmouseenter="cardMouseEnter(this)" onmouseleave="cardMouseLeave(this)"
+                    class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
+                    <img class="mx-auto" src="/images/ronaldo.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Cristiano Ronaldo</h4>
                     <p class="mt-2"><span>96 Goals . 120 assist</span></p>
                     <button onclick="selectButton(this)"
-                        class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
+                        class="mt-6 bg-blue-700 text-white w-10/12 py-2 rounded-sm">SELECT</button>
                 </div>
                 <!-- 2nd player -->
-                <div class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
-                    <img src="/images/messi.png" alt="">
+                <div onmouseenter="cardMouseEnter(this)" onmouseleave="cardMouseLeave(this)"
+                    class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
+                    <img class="mx-auto" src="/images/messi.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Lionel Messi</h4>
-                    <p class="mt-2"><span>96 Goals . 120 assist</span></p>
+                    <p class="mt-2"><span>92 Goals . 120 assist</span></p>
                     <button onclick="selectButton(this)"
-                        class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
+                        class="mt-6 bg-blue-700 text-white w-10/12 py-2 rounded-sm">SELECT</button>
                 </div>
                 <!-- 3rd player -->
-                <div class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
-                    <img src="/images/neymar.png" alt="">
+                <div onmouseenter="cardMouseEnter(this)" onmouseleave="cardMouseLeave(this)"
+                    class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
+                    <img class="mx-auto" src="/images/neymar.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Neymar</h4>
-                    <p class="mt-2"><span>96 Goals . 120 assist</span></p>
+                    <p class="mt-2"><span>81 Goals . 120 assist</span></p>
                     <button onclick="selectButton(this)"
-                        class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
+                        class="mt-6 bg-blue-700 text-white w-10/12 py-2 rounded-sm">SELECT</button>
                 </div>
                 <!-- 4th player -->
-                <div class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
-                    <img src="/images/ramos.png" alt="">
+                <div onmouseenter="cardMouseEnter(this)" onmouseleave="cardMouseLeave(this)"
+                    class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
+                    <img class="mx-auto" src="/images/ramos.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Sergio Ramos</h4>
-                    <p class="mt-2"><span>96 Goals . 120 assist</span></p>
+                    <p class="mt-2"><span>45 Goals . 120 assist</span></p>
                     <button onclick="selectButton(this)"
-                        class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
+                        class="mt-6 bg-blue-700 text-white w-10/12 py-2 rounded-sm">SELECT</button>
                 </div>
                 <!-- 5th player -->
-                <div class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
-                    <img src="/images/mbappe.png" alt="">
+                <div onmouseenter="cardMouseEnter(this)" onmouseleave="cardMouseLeave(this)"
+                    class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
+                    <img class="mx-auto" src="/images/mbappe.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Kylian Mbappé</h4>
-                    <p class="mt-2"><span>96 Goals . 120 assist</span></p>
+                    <p class="mt-2"><span>35 Goals . 120 assist</span></p>
                     <button onclick="selectButton(this)"
-                        class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
+                        class="mt-6 bg-blue-700 text-white w-10/12 py-2 rounded-sm">SELECT</button>
                 </div>
                 <!-- 6th player -->
-                <div class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
-                    <img src="/images/ibrahimovic.png" alt="">
+                <div onmouseenter="cardMouseEnter(this)" onmouseleave="cardMouseLeave(this)"
+                    class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
+                    <img class="mx-auto" src="/images/ibrahimovic.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Zlatan Ibrahimovic</h4>
-                    <p class="mt-2"><span>96 Goals . 120 assist</span></p>
+                    <p class="mt-2"><span>78 Goals . 120 assist</span></p>
                     <button onclick="selectButton(this)"
-                        class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
+                        class="mt-6 bg-blue-700 text-white w-10/12 py-2 rounded-sm">SELECT</button>
                 </div>
                 <!-- 7th player -->
-                <div class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
-                    <img src="/images/renato-sanches.png" alt="">
+                <div onmouseenter="cardMouseEnter(this)" onmouseleave="cardMouseLeave(this)"
+                    class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
+                    <img class="mx-auto" src="/images/renato-sanches.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Renato Sanches</h4>
-                    <p class="mt-2"><span>96 Goals . 120 assist</span></p>
+                    <p class="mt-2"><span>44 Goals . 120 assist</span></p>
                     <button onclick="selectButton(this)"
-                        class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
+                        class="mt-6 bg-blue-700 text-white w-10/12 py-2 rounded-sm">SELECT</button>
                 </div>
                 <!-- 8th player -->
-                <div class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
-                    <img src="/images/machado.png" alt="">
+                <div onmouseenter="cardMouseEnter(this)" onmouseleave="cardMouseLeave(this)"
+                    class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
+                    <img class="mx-auto" src="/images/machado.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Vítor Machado</h4>
-                    <p class="mt-2"><span>96 Goals . 120 assist</span></p>
+                    <p class="mt-2"><span>52 Goals . 120 assist</span></p>
                     <button onclick="selectButton(this)"
-                        class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
+                        class="mt-6 bg-blue-700 text-white w-10/12 py-2 rounded-sm">SELECT</button>
                 </div>
                 <!-- 9th player -->
-                <div class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
-                    <img src="/images/salah.png" alt="">
+                <div onmouseenter="cardMouseEnter(this)" onmouseleave="cardMouseLeave(this)"
+                    class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
+                    <img class="mx-auto" src="/images/salah.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Mohamed Salah</h4>
-                    <p class="mt-2"><span>96 Goals . 120 assist</span></p>
+                    <p class="mt-2"><span>73 Goals . 120 assist</span></p>
                     <button onclick="selectButton(this)"
-                        class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
+                        class="mt-6 bg-blue-700 text-white w-10/12 py-2 rounded-sm">SELECT</button>
                 </div>
             </div>
             <!-- Aside Widget -->

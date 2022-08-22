@@ -91,3 +91,50 @@ document.getElementById('calculate-total').addEventListener('click', function ()
 
     total.innerText = Number(playerExpenses) + Number(managerCost) + Number(coachCost)
 })
+
+
+
+// Funcion for adding transition of header hover effect
+function bannerHover() {
+    document.getElementById('banner-heading').style.transition = '1s'
+}
+
+
+
+
+// Function for Header Animation (MouseEnter)
+function bannerImgMouseEnter(element) {
+    element.children[0].style.marginLeft = '20px'
+    element.children[0].style.transition = '1s'
+    element.children[2].style.marginBottom = '70px'
+    element.children[2].style.transition = '1s'
+    element.children[2].style.marginRight = '70px'
+    element.children[2].style.transition = '1s'
+}
+
+// Function for Header Animation (MouseLeave)
+function bannerImgMouseLeave(element) {
+    element.children[0].style.marginLeft = '0px'
+    element.children[0].style.transition = '1s'
+    element.children[2].style.marginBottom = '0px'
+    element.children[2].style.transition = '1s'
+    element.children[2].style.marginRight = '0px'
+    element.children[2].style.transition = '1s'
+}
+
+
+
+
+// Function for Card Animation (MouseEnter)
+function cardMouseEnter(element) {
+    element.style.margin = '-5px'
+    element.style.transition = '0.3s'
+    console.log(element)
+}
+
+// Function for Card Animation (MouseLeave)
+function cardMouseLeave(element) {
+    element.style.margin = '0'
+    element.style.transition = '0.3s'
+    console.log(element)
+}
