@@ -6,7 +6,7 @@ function selectButton(element) {
 
     // Alerts will show when players > 5
     if (count > 5) {
-        alert("You can't select more then 5 player.")
+        alert("You can't select more then 5 players.")
         return
     }
 
@@ -81,11 +81,15 @@ document.getElementById('calculate-total').addEventListener('click', function ()
     const coachCost = document.getElementById('coach-cost').value
     const total = document.getElementById('total')
 
+    // Alert for valid number
     if (managerCost == '' || coachCost == '') {
         alert('Please type a number')
         return
     } else if (Number(managerCost) < 0 || Number(coachCost < 0)) {
         alert("Please provide a positive number")
+        return
+    } else if (isNaN(managerCost) || isNaN(coachCost)) {
+        alert('Please make sure that your input is a number')
         return
     }
 
