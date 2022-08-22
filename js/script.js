@@ -52,8 +52,15 @@ document.getElementById('calculate').addEventListener('click', function () {
     const countPlayerExpenses = Number(perPlayer) * count
 
 
+    if (perPlayer == '') {
+        alert('Please type a number')
+        return
+    } else if (isNaN(countPlayerExpenses)) {
+        alert('Please make sure that your input is a number')
+        return
+    }
 
-
+    console.log(countPlayerExpenses)
 
     // Calculate Player Expenses
     playerExpenses.innerText = countPlayerExpenses
@@ -68,6 +75,8 @@ document.getElementById('calculate-total').addEventListener('click', function ()
     const managerCost = document.getElementById('manager-cost').value
     const coachCost = document.getElementById('coach-cost').value
     const total = document.getElementById('total')
+
+
 
     total.innerText = Number(playerExpenses) + Number(managerCost) + Number(coachCost)
 })
