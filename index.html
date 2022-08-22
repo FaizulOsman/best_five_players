@@ -16,6 +16,7 @@
                     colors: {
                         background: '#0A0826',
                         heading: '#FF5E19',
+                        bg2: '#1a173e',
                     }
                 }
             }
@@ -23,20 +24,20 @@
     </script>
 </head>
 
-<body class="bg-indigo-900">
+<body class="bg-bg2">
     <!-- Header Section -->
-    <header class="bg-background">
-        <div class="flex">
-            <img class="w-1/4 h-5/6 mt-12" src="/images/banner-ronaldo.png" alt="">
-            <div class="text-center grid items-center">
-                <div class="w-5/6 mx-auto">
-                    <h1 class="text-7xl text-heading mb-5">Select Your Best Players</h1>
+    <header class="bg-background pt-20">
+        <div class="relative h-96">
+            <img class="absolute bottom-0 left-0" src="/images/banner-ronaldo.png" alt="">
+            <div class="text-center">
+                <div class="w-3/5 mx-auto pt-20 px-10">
+                    <h1 class="text-6xl text-heading mb-5">Select Your Best Players</h1>
                     <p class="text-gray-400">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
                         Velit officia consequat
                         duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                 </div>
             </div>
-            <img class="w-auto h-64 mt-48" src="/images/rectangle.png" alt="">
+            <img class="absolute bottom-0 right-0" src="/images/rectangle.png" alt="">
         </div>
     </header>
     <!-- Main Section -->
@@ -48,46 +49,52 @@
                     <img src="/images/ronaldo.png" alt="">
                     <h4 class="text-2xl font-semibold mt-2">Cristiano Ronaldo</h4>
                     <p class="mt-2"><span>96 Goals . 120 assist</span></p>
-                    <button class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
+                    <button onclick="selectButton(this)"
+                        class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
                 </div>
                 <div class="text-center bg-background text-white rounded-sm pb-5">
-                    <img src="/images/ronaldo.png" alt="">
-                    <h4 class="text-2xl font-semibold mt-2">Cristiano Ronaldo</h4>
+                    <img src="/images/messi.png" alt="">
+                    <h4 class="text-2xl font-semibold mt-2">Lionel Messi</h4>
                     <p class="mt-2"><span>96 Goals . 120 assist</span></p>
-                    <button class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
+                    <button onclick="selectButton(this)"
+                        class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
                 </div>
                 <div class="text-center bg-background text-white rounded-sm pb-5">
-                    <img src="/images/ronaldo.png" alt="">
-                    <h4 class="text-2xl font-semibold mt-2">Cristiano Ronaldo</h4>
+                    <img src="/images/neymar.png" alt="">
+                    <h4 class="text-2xl font-semibold mt-2">Neymar</h4>
                     <p class="mt-2"><span>96 Goals . 120 assist</span></p>
-                    <button class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
+                    <button onclick="selectButton(this)"
+                        class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
                 </div>
                 <div class="text-center bg-background text-white rounded-sm pb-5">
-                    <img src="/images/ronaldo.png" alt="">
-                    <h4 class="text-2xl font-semibold mt-2">Cristiano Ronaldo</h4>
+                    <img src="/images/ramos.png" alt="">
+                    <h4 class="text-2xl font-semibold mt-2">Sergio Ramos</h4>
                     <p class="mt-2"><span>96 Goals . 120 assist</span></p>
-                    <button class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
+                    <button onclick="selectButton(this)"
+                        class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
                 </div>
                 <div class="text-center bg-background text-white rounded-sm pb-5">
-                    <img src="/images/ronaldo.png" alt="">
-                    <h4 class="text-2xl font-semibold mt-2">Cristiano Ronaldo</h4>
+                    <img src="/images/mbappe.png" alt="">
+                    <h4 class="text-2xl font-semibold mt-2">Kylian Mbappé</h4>
                     <p class="mt-2"><span>96 Goals . 120 assist</span></p>
-                    <button class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
+                    <button onclick="selectButton(this)"
+                        class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
                 </div>
                 <div class="text-center bg-background text-white rounded-sm pb-5">
-                    <img src="/images/ronaldo.png" alt="">
-                    <h4 class="text-2xl font-semibold mt-2">Cristiano Ronaldo</h4>
+                    <img src="/images/renato-sanches.png" alt="">
+                    <h4 class="text-2xl font-semibold mt-2">Renato Sanches</h4>
                     <p class="mt-2"><span>96 Goals . 120 assist</span></p>
-                    <button class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
+                    <button onclick="selectButton(this)"
+                        class="mt-6 bg-blue-700 text-white px-16 py-2 rounded-sm">SELECT</button>
                 </div>
             </div>
             <!-- Aside Widget -->
             <aside class="w-1/4 grid gap-4">
-                <div class="text-center bg-background border border-black rounded-sm">
-                    <h4 class="text-2xl font-semibold text-white">Selected - V</h4>
+                <div id="selected" class="text-center bg-background border border-black rounded-sm">
+                    <h4 class="text-2xl font-semibold text-white pt-5">Selected - V</h4>
                 </div>
                 <div class="text-center bg-background border border-black rounded-sm">
-                    <h4 class="text-2xl font-semibold text-white">Budget</h4>
+                    <h4 class="text-2xl font-semibold text-white pt-5">Budget</h4>
                 </div>
             </aside>
         </section>
@@ -97,6 +104,8 @@
         <p class="flex items-center justify-center">Copyright @ 2022 All Rights Reserved.</p>
     </footer>
 
+
+    <script src="js/script.js"></script>
 </body>
 </body>
 
